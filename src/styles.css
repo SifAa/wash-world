@@ -1,0 +1,56 @@
+body {
+  background-color: #f6f6f6;
+}
+
+nav {
+  min-height: 80px;
+  padding-left: 25px;
+}
+.nav--logo {
+  width: 6rem;
+  height: auto;
+  /* margin: 5px 16px; */
+}
+
+.nav-container,
+.container {
+  margin: 0px auto;
+  width: 504px;
+}
+
+.btn-location {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  font-size: 1.3rem;
+}
+.btn-wash {
+  background-color: #00c167;
+  color: #fff;
+  border: 1px solid #198b47;
+}
+.btn:disabled {
+  background-color: dimgrey;
+  border-color: dimgray;
+}
+.btn-wash:hover,
+.btn-wash:focus {
+  background-color: #188c47;
+  color: #fff;
+}
+.btn-card {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.card {
+  margin-top: 20px;
+}
+.program-price {
+  font-weight: 700;
+  text-align: right;
+  margin-right: 10px;
+}
