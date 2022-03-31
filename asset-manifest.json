@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wash-world/static/css/main.3cd93a47.css",
+    "main.js": "/wash-world/static/js/main.de35aa53.js",
+    "index.html": "/wash-world/index.html",
+    "main.3cd93a47.css.map": "/wash-world/static/css/main.3cd93a47.css.map",
+    "main.de35aa53.js.map": "/wash-world/static/js/main.de35aa53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cd93a47.css",
+    "static/js/main.de35aa53.js"
+  ]
+}
