@@ -23,14 +23,16 @@ function App() {
 
   function locationClicked(event) {
     setLocationID(event.target.value);
-    setCamLoad(true);
+    //setCamLoad(true);
   }
 
   const [lpn, setLPN] = useState({});
-  const [camLoad, setCamLoad] = useState(false);
+  //const [camLoad, setCamLoad] = useState(false);
 
   const [products, setProducts] = useState([]);
   const [programID, setProgramID] = useState(0);
+
+  const [program, setProgram] = useState({});
 
   function chooseWash(event) {
     setProgramID(event.target.value);
@@ -41,25 +43,26 @@ function App() {
       {/* {console.log(Object.keys(cam).length)} */}
       <Navbar />
       <main className="container">
-        {locations.length > 0 &&
-          locationID === 0 &&
-          //cam.length == 0 &&
-          locations.map((location) => {
-            return (
-              <WashLocation
-                key={location.id}
-                location={location}
-                locationClicked={locationClicked}
-              />
-            );
-          })}
+        {locations.length > 0 && locationID === 0 && (
+          <div className="location-container">
+            {locations.map((location) => {
+              return (
+                <WashLocation
+                  key={location.id}
+                  location={location}
+                  locationClicked={locationClicked}
+                />
+              );
+            })}
+          </div>
+        )}
         {locationID !== 0 && Object.keys(lpn).length === 0 && (
           <WashCam
             locationID={locationID}
             setLPN={setLPN}
             lpn={lpn}
-            setCamLoad={setCamLoad}
-            camLoad={camLoad}
+            //setCamLoad={setCamLoad}
+            //camLoad={camLoad}
           />
         )}
         {Object.keys(lpn).length > 0 && programID === 0 && (
@@ -74,7 +77,12 @@ function App() {
           />
         )}
         {programID !== 0 && (
-          <WashStatus locationID={locationID} programID={programID} />
+          <WashStatus
+            locationID={locationID}
+            programID={programID}
+            program={program}
+            setProgram={setProgram}
+          />
         )}
       </main>
     </div>

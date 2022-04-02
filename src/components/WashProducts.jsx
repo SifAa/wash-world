@@ -14,8 +14,24 @@ export default function WashProducts(data) {
   }, []);
 
   return (
-    <div>
+    <div className="products-container">
       <h2>Vælg program</h2>
+      {data.products.length === 0 && (
+        <div className="lds-default">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
       {/* {console.log(data.products)} */}
       {data.products.map((product) => {
         return (
