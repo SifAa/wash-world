@@ -21,7 +21,7 @@ export default function WashStatus(data) {
   if (duration) {
     var durationArray = duration.split(":");
     var minutes = durationArray[0];
-    var seconds = checkSecond(durationArray[1] - 1);
+    var seconds = durationArray[1];
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
     startTimer();
   }
